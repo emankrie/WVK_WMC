@@ -24,7 +24,7 @@ body {
   font-size: 400%;
 }
 
-.quizquestion h2 {
+.quiz h2 {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   margin-top: 0;
@@ -46,7 +46,7 @@ body {
   border-style: solid;
 }
 
-.answers {
+.answerbuttons {
   background: white;
   width: 90%;
   margin-left: auto;
@@ -57,7 +57,7 @@ body {
   border-style: solid;
 }
 
-.answerbutton {
+.buttons {
   background: white;
   color: black;
   font-weight: 500;
@@ -73,7 +73,7 @@ body {
   transition: all 0.3s;
 }
 
-.answerbutton:hover {
+.buttons:hover {
   background: black;
   color: white;
 
