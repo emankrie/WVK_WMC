@@ -1,6 +1,9 @@
 body {
     background-image: url("https://4kwallpapers.com/images/wallpapers/fc-bayern-munich-5120x2880-14113.png");
-    background-size: 500%;
+    background-color:rgb(220, 5, 45);
+    background-size: auto;
+    height: 100%;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     padding: 0px
