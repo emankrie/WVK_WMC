@@ -8,6 +8,77 @@ body {
     background-repeat: no-repeat;
     padding: 0px
 }
+
+.quizscreen {
+  background: rgb(220, 5, 45);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  border-width: 10px;
+  border-color: black;
+  border-style: solid dashed;
+}
+
+.quizscreen h1 {
+  font-size: 400%;
+}
+
+.quizquestion h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 1;
+  margin-left: 1;
+  font-size: 250%;
+  font-weight: 900;
+}
+
+.quizquestion {
+  background: rgb(220, 5, 45);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  border-width: 10px;
+  border-color: black;
+  border-style: solid;
+}
+
+.answers {
+  background: white;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  border-width: 10px;
+  border-color: black;
+  border-style: solid;
+}
+
+.answerbutton {
+  background: white;
+  color: black;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.answerbutton:hover {
+  background: black;
+  color: white;
+
+}
+
 .information {
   background-color: rgb(220, 5, 45);
   width: 80%;
@@ -39,7 +110,7 @@ h1 {
       font-size: 180%;
       font-weight: 900;
 }
-h2 {
+.information h2 {
       font-family: Arial, Helvetica, sans-serif;
       color: black;
       margin-right: 1;
