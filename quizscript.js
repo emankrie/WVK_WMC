@@ -257,6 +257,10 @@ function showQuestion(){
         button.innerHTML = answer.text;
         button.classList.add("buttons");
         answerButtons.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
     })
 }
 
@@ -266,5 +270,52 @@ function resetState(){
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
+
+function selectAnswer(event){
+    const selectedButton = event.currentTarget;
+    const isTrue = selectedButton.dataset.correct == "true";
+    if(isTrue){
+        selectedButton.classList.add("correct");
+        score += 1;
+    }
+    else{
+        selectedButton.classList.add("incorrect");
+    }
+    Array.from(answerButtons.children).forEach(button =>{
+        if(button.dataset.correct == "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = "block";
+}
+
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `Du hast ${score} von ${questions.length} Punkten erreicht!`;
+    nextButton.innerHTML = "play Again";
+    nextButton.style.display = "block";
+}
+
+
+function handleNextButton(){
+    QuestionIndex += 1;
+    if(QuestionIndex < questions.length){
+        showQuestion();
+    }
+    else {
+        showScore();
+    }
+}
+
+
+nextButton.addEventListener("click", ()=>{
+    if(QuestionIndex < questions.length){
+        handleNextButton();}
+    else {
+        startQuiz();
+    }
+    }
+)
 
 startQuiz()
